@@ -45,7 +45,7 @@ public class SwiftFlutterMidiplayerPlugin: NSObject, FlutterPlugin {
         result(call.method + UIDevice.current.systemVersion)
         sound.play()
 
-        if #available(iOS 10.0, *) {
+        /*if #available(iOS 10.0, *) {
             var count = 0;
             Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { (timer) in
 
@@ -65,7 +65,7 @@ public class SwiftFlutterMidiplayerPlugin: NSObject, FlutterPlugin {
             }
         } else {
             // Fallback on earlier versions
-        }
+        }*/
 
     } else if (call.method == "STOP"){
         result(call.method + UIDevice.current.systemVersion)
