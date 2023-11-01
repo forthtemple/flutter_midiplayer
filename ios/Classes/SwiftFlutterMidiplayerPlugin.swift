@@ -33,11 +33,11 @@ public class SwiftFlutterMidiplayerPlugin: NSObject, FlutterPlugin {
         
         let fileURL = documentDirectory?.appendingPathComponent(path)
         
-        if (sound == nil){
+        //if (sound == nil){
             sound = SynthSequence(fileURL: fileURL!, bankUrl: bankURL!, patches: patches ?? [74,0] ,channels: channels ?? [0,1])
-        } else {
-            sound.loadFile(fileURL: fileURL!)
-        }
+       // } else {
+       //     sound.loadFile(fileURL: fileURL!)
+       // }
 
         sound.sequencer.currentPositionInBeats = 0
         sound.prepareToPlay()
